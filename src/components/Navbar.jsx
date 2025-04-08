@@ -11,6 +11,7 @@ const Navbar = () => {
     setUser(null);
     navigate("/");
   };
+ 
   return (
     <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
       <NavLink to="/" onClick={() => setOpen(false)}>
@@ -47,7 +48,7 @@ const Navbar = () => {
         </div>
 
         {!user ? (
-          <button className="cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition text-white rounded-full">
+          <button onClick={()=> setShowUserLogin(true)} className="cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition text-white rounded-full">
             Login
           </button>
         ) : (
