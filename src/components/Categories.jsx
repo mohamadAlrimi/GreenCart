@@ -14,7 +14,7 @@ function Categories() {
             className="group cursor-pointer py-5 px-3 gap-2 rounded-lg flex flex-col justify-center items-center "
             style={{ backgroundColor: category.bgColor }}
             onClick={() => {
-              navigate(`/product/${category.path.toLowerCase()}`);
+              navigate(`/products/${category.path.toLowerCase()}`);
               scrollTo(0, 0);
             }}
           >
